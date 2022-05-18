@@ -9,6 +9,10 @@ const Login = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
 
+    if(user){
+        navigate('/home');
+    }
+
     if (error) {
         return (
             <div>
